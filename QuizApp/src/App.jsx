@@ -7,7 +7,7 @@ import Quiz from "./Components/Quiz";
 import Result from "./Components/Result";
 import { useState } from "react";
 import axios from "axios";
-import Categories from "./Components/Categories";
+import he from "he"; // Import the he library for decoding
 
 function App() {
   const [name, setName] = useState("");
@@ -15,10 +15,20 @@ function App() {
   const [score, setScore] = useState(0);
 
   const fetchQuestions = async (category = "", difficulty = "") => {
-    const { data } = await axios.get(
-      `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`
-    );
-    setQuestions(data.results);
+    try {
+      const { data } = await axios.get(
+        `https://opentdb.com/api.php?amount=25&category=${category}&difficulty=${difficulty}&type=multiple`
+      );
+      const decodedQuestions = data.results.map((q) => ({
+        ...q,
+        question: he.decode(q.question), // Decode the question text
+        correct_answer: he.decode(q.correct_answer), // Decode the correct answer
+        incorrect_answers: q.incorrect_answers.map((ans) => he.decode(ans)), // Decode incorrect answers
+      }));
+      setQuestions(decodedQuestions);
+    } catch (error) {
+      console.error("Failed to fetch questions:", error);
+    }
   };
 
   return (
@@ -48,7 +58,10 @@ function App() {
               />
             }
           />
-          <Route path="/result" element={<Result />} />
+          <Route
+            path="/result"
+            element={<Result name={name} score={score} />}
+          />
         </Routes>
       </div>
       <Footer />

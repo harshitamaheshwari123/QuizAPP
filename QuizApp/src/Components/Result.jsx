@@ -1,6 +1,6 @@
+import React, { useEffect } from "react"; 
 import { Button } from "@mui/material";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 import "./Result.css";
 
 const Result = ({ name, score }) => {
@@ -8,7 +8,7 @@ const Result = ({ name, score }) => {
 
   useEffect(() => {
     if (!name) {
-      navigate("/");
+      navigate("/"); 
     }
   }, [name, navigate]);
 
@@ -20,7 +20,7 @@ const Result = ({ name, score }) => {
         color="secondary"
         size="large"
         style={{ alignSelf: "center", marginTop: 20 }}
-        onClick={() => navigate("/")}
+        href="/"
       >
         Go to homepage
       </Button>
