@@ -7,7 +7,7 @@ import Quiz from "./Components/Quiz";
 import Result from "./Components/Result";
 import { useState } from "react";
 import axios from "axios";
-import he from "he"; // Import the he library for decoding
+import he from "he"; 
 
 function App() {
   const [name, setName] = useState("");
@@ -21,9 +21,9 @@ function App() {
       );
       const decodedQuestions = data.results.map((q) => ({
         ...q,
-        question: he.decode(q.question), // Decode the question text
-        correct_answer: he.decode(q.correct_answer), // Decode the correct answer
-        incorrect_answers: q.incorrect_answers.map((ans) => he.decode(ans)), // Decode incorrect answers
+        question: he.decode(q.question),
+        correct_answer: he.decode(q.correct_answer),
+        incorrect_answers: q.incorrect_answers.map((ans) => he.decode(ans)),
       }));
       setQuestions(decodedQuestions);
     } catch (error) {
