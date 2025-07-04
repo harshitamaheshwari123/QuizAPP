@@ -1,4 +1,4 @@
-![Screenshot 2025-07-01 141125](https://github.com/user-attachments/assets/7439e21e-333c-40ac-b4f1-69f8d888cecc)# 🧠 React Quiz App
+🧠 React Quiz App
 
 A dynamic and responsive quiz platform built using **React** and powered by the **Open Trivia DB API**. Designed for rapid deployment, scalability, and an engaging user experience, this project demonstrates real-world API integration, state management, and UI logic in a modular React architecture.
 
