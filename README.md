@@ -22,18 +22,13 @@ A dynamic and responsive quiz platform built using **React** and powered by the 
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](![Screenshot 2025-07-01 141125](https://github.com/user-attachments/assets/b38cf2c2-c68f-46f3-ba76-a48188c7346a)
-)
+Home - (![Screenshot 2025-07-01 141125](https://github.com/user-attachments/assets/b38cf2c2-c68f-46f3-ba76-a48188c7346a)
 
 ### ❓ Quiz Interface
-![Quiz](![Screenshot 2025-07-04 223150](https://github.com/user-attachments/assets/b2ed65fb-f6cb-4fe0-ae99-8434b11a9f8d)
-)
+Quiz - (![Screenshot 2025-07-04 223150](https://github.com/user-attachments/assets/b2ed65fb-f6cb-4fe0-ae99-8434b11a9f8d)
 
 ### 📊 Result Summary
-![Result](![Screenshot 2025-07-04 223232](https://github.com/user-attachments/assets/01c50096-402e-4efd-a619-b1a854e59ad7)
-)
-
----
+Result - (![Screenshot 2025-07-04 223232](https://github.com/user-attachments/assets/01c50096-402e-4efd-a619-b1a854e59ad7)
 
 ## 🚀 Live Demo
 
